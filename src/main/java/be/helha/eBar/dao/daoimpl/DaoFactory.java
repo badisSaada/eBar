@@ -1,4 +1,6 @@
-package be.helha.persistance;
+package be.helha.eBar.dao.daoimpl;
+
+import be.helha.eBar.dao.daoimpl.BiereDaoMockImpl;
 
 public class DaoFactory {
     public static final DaoFactory INSTANCE = new DaoFactory();

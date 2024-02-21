@@ -1,7 +1,10 @@
 package be.helha;
 
-import be.helha.metier.Biere;
-import be.helha.persistance.BiereDaoMockImpl;
+import be.helha.eBar.biere.Biere;
+import be.helha.eBar.dao.BiereDao;
+import be.helha.eBar.bundle.*;
+import be.helha.eBar.dao.daoimpl.BiereDaoMockImpl;
+import be.helha.eBar.usecase.*;
 import org.junit.jupiter.api.*;
 
 

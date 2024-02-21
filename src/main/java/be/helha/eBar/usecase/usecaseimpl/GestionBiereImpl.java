@@ -1,8 +1,10 @@
 package be.helha.usecase;
 
-import be.helha.metier.Biere;
-import be.helha.metier.Bundle;
-import be.helha.persistance.BiereDao;
+import be.helha.eBar.biere.Biere;
+import be.helha.eBar.bundle.Bundle;
+import be.helha.eBar.dao.BiereDao;
+import be.helha.eBar.usecase.GestionBiere;
+
 
 
 public class GestionBiereImpl implements GestionBiere {

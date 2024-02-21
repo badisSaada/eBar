@@ -1,4 +1,4 @@
-package be.helha.metier;
+package be.helha.eBar.biere;
 
 import java.util.Objects;
 

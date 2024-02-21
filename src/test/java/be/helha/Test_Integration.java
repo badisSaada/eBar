@@ -1,8 +1,9 @@
 package be.helha;
 
-import be.helha.metier.Biere;
-import be.helha.metier.Bundle;
-import be.helha.persistance.BiereDaoMockImpl;
+
+import be.helha.eBar.biere.Biere;
+import be.helha.eBar.bundle.Bundle;
+import be.helha.eBar.dao.daoimpl.BiereDaoMockImpl;
 import be.helha.usecase.GestionBiereImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

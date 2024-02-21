@@ -1,5 +1,7 @@
-package be.helha.persistance;
-import be.helha.metier.Biere;
+package be.helha.eBar.dao.daoimpl;
+import be.helha.eBar.biere.Biere;
+import be.helha.eBar.dao.BiereDao;
+
 
 
 import java.util.*;

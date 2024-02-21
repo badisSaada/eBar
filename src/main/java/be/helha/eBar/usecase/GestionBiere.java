@@ -1,6 +1,7 @@
 package be.helha.eBar.usecase;
 
-import be.helha.metier.Bundle;
+import be.helha.eBar.*;
+import be.helha.eBar.bundle.Bundle;
 
 public interface GestionBiere {
     public void ajouterBiere(Bundle bundle);

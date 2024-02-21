@@ -1,4 +1,4 @@
-package be.helha.metier;
+package be.helha.eBar.bundle;
 /*
  *  Une instance de cette classe contiendra des donn�es : une bi�re, liste de bieres, message, ...
  *  Elle facilite le transfert de ces donn�es de la couche de pr�sentation ou du programme de tests
