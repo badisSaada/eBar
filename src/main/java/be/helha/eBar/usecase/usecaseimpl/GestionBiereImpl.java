@@ -1,10 +1,11 @@
-package be.helha.usecase;
+package be.helha.eBar.usecase.usecaseimpl;
 
 import be.helha.eBar.biere.Biere;
 import be.helha.eBar.bundle.Bundle;
 import be.helha.eBar.dao.BiereDao;
 import be.helha.eBar.usecase.GestionBiere;
 
+import java.sql.SQLException;
 
 
 public class GestionBiereImpl implements GestionBiere {
@@ -16,7 +17,7 @@ public class GestionBiereImpl implements GestionBiere {
     }
 
     @Override
-    public void ajouterBiere(Bundle bundle) {
+    public void ajouterBiere(Bundle bundle) throws SQLException {
         if (bundle.get(Bundle.BIERE) instanceof Biere) {
             Biere biere = (Biere) bundle.get(Bundle.BIERE);
             boolean ajout = biereDao.ajouterBiere(biere);
@@ -33,12 +34,12 @@ public class GestionBiereImpl implements GestionBiere {
     }
 
     @Override
-    public void lister(Bundle bundle) {
+    public void lister(Bundle bundle) throws SQLException {
         bundle.put(Bundle.LISTE, biereDao.listerBiere());
     }
 
     @Override
-    public void modifierBiere(Bundle bundle) {
+    public void modifierBiere(Bundle bundle) throws SQLException {
         if (bundle.get(Bundle.BIERE) instanceof Biere) {
             Biere biere = (Biere) bundle.get(Bundle.BIERE);
             boolean modification = biereDao.modifierBiere(biere);
@@ -55,7 +56,7 @@ public class GestionBiereImpl implements GestionBiere {
     }
 
     @Override
-    public void rechercherBiere(Bundle bundle) {
+    public void rechercherBiere(Bundle bundle) throws SQLException {
         if (bundle.get(Bundle.NOM) instanceof String) {
             String nom = (String) bundle.get(Bundle.NOM);
             Biere biere = biereDao.getBiere(nom);
@@ -72,7 +73,7 @@ public class GestionBiereImpl implements GestionBiere {
     }
 
     @Override
-    public void supprimerBiere(Bundle bundle) {
+    public void supprimerBiere(Bundle bundle) throws SQLException {
         if (bundle.get(Bundle.BIERE) instanceof Biere) {
             Biere biere = (Biere) bundle.get(Bundle.BIERE);
             boolean suppression = biereDao.supprimerBiere(biere);

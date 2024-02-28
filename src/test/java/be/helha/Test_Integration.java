@@ -1,12 +1,16 @@
+
 package be.helha;
+
 
 
 import be.helha.eBar.biere.Biere;
 import be.helha.eBar.bundle.Bundle;
 import be.helha.eBar.dao.daoimpl.BiereDaoMockImpl;
-import be.helha.usecase.GestionBiereImpl;
+import be.helha.eBar.usecase.usecaseimpl.GestionBiereImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,7 +24,7 @@ public class Test_Integration {
     }
 
     @Test
-    void testAjouterBiere() {
+    void testAjouterBiere() throws SQLException {
         Bundle bundle = new Bundle();
         Biere biere = new Biere("Helha", "Bleu", "Bierasse", "Louvain-la-Neuve");
         bundle.put(Bundle.BIERE, biere);
@@ -30,7 +34,7 @@ public class Test_Integration {
     }
 
     @Test
-    void testRechercherBiere() {
+    void testRechercherBiere() throws SQLException {
         Bundle bundle = new Bundle();
         bundle.put(Bundle.BIERE, "Bierasse");
         gestionBieres.rechercherBiere(bundle);
@@ -39,7 +43,7 @@ public class Test_Integration {
     }
 
     @Test
-    void testLister() {
+    void testLister() throws SQLException {
         Bundle bundle = new Bundle();
         gestionBieres.lister(bundle);
         assertNotNull(bundle.get(Bundle.LISTE));
@@ -47,7 +51,7 @@ public class Test_Integration {
     }
 
     @Test
-    void testSupprimerBiere() {
+    void testSupprimerBiere() throws SQLException {
         Bundle bundle = new Bundle();
         Biere biere = new Biere("Helha", "Bleu", "Bierasse", "Louvain-la-Neuve");
         bundle.put(Bundle.BIERE, biere);
@@ -61,7 +65,7 @@ public class Test_Integration {
     }
 
     @Test
-    void testModifierBiere() {
+    void testModifierBiere() throws SQLException {
         Bundle bundle = new Bundle();
         Biere biere = new Biere("Helha", "Bleu", "Bierasse", "Louvain-la-Neuve");
         bundle.put(Bundle.BIERE, biere);

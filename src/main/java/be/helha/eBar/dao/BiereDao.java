@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface BiereDao {
     public boolean ajouterBiere(Biere biere) throws SQLException;
-    public Biere getBiere(String nom);
-    public List<Biere> listerBiere();
-    public boolean modifierBiere(Biere biere);
-    public boolean supprimerBiere(Biere biere);
+    public Biere getBiere(String nom) throws SQLException;
+    public List<Biere> listerBiere() throws SQLException;
+    public boolean modifierBiere(Biere biere) throws SQLException;
+    public boolean supprimerBiere(Biere biere) throws SQLException;
 }

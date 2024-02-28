@@ -6,8 +6,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class DaoFactory {
     public static final DaoFactory INSTANCE = new DaoFactory();
+
     public static final Connection CON;
 
     static {
