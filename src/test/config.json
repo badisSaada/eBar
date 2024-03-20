@@ -1,0 +1,7 @@
+{
+"type" : "DB",
+"dao" : "be.helha.eBar.dao.daoimpl.BiereDaoImpl",
+"url" : "jdbc:postgresql://localhost:5432/postgres",
+"user" : "postgres",
+"password" : "1234"
+}
