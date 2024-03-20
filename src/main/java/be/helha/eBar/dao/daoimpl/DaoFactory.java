@@ -1,7 +1,5 @@
 package be.helha.eBar.dao.daoimpl;
 
-import be.helha.eBar.dao.daoimpl.BiereDaoMockImpl;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -9,7 +7,7 @@ import java.sql.SQLException;
 
 public class DaoFactory {
     public static final DaoFactory INSTANCE = new DaoFactory();
-
+    public static final String FICHIERCONFIG ="C:\\Users\\Lounis\\Desktop\\Fiche 1-20240207\\GradleJavaProject\\eBar3\\src\\test\\config.json";
     public static final Connection CON;
 
     static {
