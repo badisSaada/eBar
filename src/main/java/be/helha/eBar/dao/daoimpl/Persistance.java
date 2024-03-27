@@ -1,10 +1,16 @@
 package be.helha.eBar.dao.daoimpl;
 
 
+import java.util.HashSet;
+import java.util.Set;
 
 public class Persistance {
     private static final String DB = "DB";
     private static final String MOCK = "MOCK";
+    private Set<String> daos=new HashSet<>(); // ensemble des noms des
+    // classes
+// d'implémentation des
+// daos
     private String type;
     private String dao;
     private String url;

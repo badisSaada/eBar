@@ -14,6 +14,7 @@ public class Bundle {
 	public static final String OPERATION_REUSSIE = "operationReussie";
 	public static final String LISTE = "liste";
 	public static final String NOM = "nom";
+	public static final String USER = "user";
 	
 	private Map<String, Object> map = new HashMap<String, Object>();
 	
